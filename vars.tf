@@ -1,3 +1,9 @@
-variable "GCP_REGION" {    
-    default = "eu-west-2"
+terraform {
+  backend "remote" {
+    organization = "kluniversity-mihir"
+
+    workspaces {
+      name = "dunnhumby"
+    }
+  }
 }
